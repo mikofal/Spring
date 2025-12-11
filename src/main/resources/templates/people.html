@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <head>
+    <title>Lista Osób</title>
+</head>
+<body>
+    <h1>Lista osób</h1>
+    <ul>
+        <li th:each="person : ${people}"
+            th:text="${person.firstName} + ' ' + ${person.familyName}">
+        </li>
+    </ul>
+    <a href="/add">Dodaj nową osobę</a>
+</body>
+</html>
